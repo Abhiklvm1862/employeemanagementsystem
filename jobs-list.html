@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.ll.2/css/all.css"> 
+    <title>Jobs List</title>
+  </head>
+  <body>
+    <div class="view video-container">
+        <video src="media/y2mate.com - Technology Background_1080p.mp4" autoplay muted loop></video>
+        </div>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="dash.html"><img src="media/Purple and White Gaming Logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="employees-list.html">Employees<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jobs-list.html">Jobs</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <div class="input-group">
+                <input type="search" class="form-control form-control-sm" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-sm btn-success" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+          </form>
+
+          <a href="signin.html" class="ml-3 btn btn-sm btn-warning">Log Out</a>
+        </div>
+      </nav>
+
+      
+    <!-- End Navbar-->
+
+
+    <!-- Dashboard Content-->
+    <div class="container-fluid">
+        <div class="row mt-3">
+          <div class="col-lg-4 col-md-4">
+            <div class="list-group">
+                 <div class="list-group-item active">Jobs Data</div>
+                 <a href="#" class="list-group-item" data-toggle="modal" data-target="#add_jobs">Add New Jobs</a>
+                 <a href="jobs-list.html" class="list-group-item">View All Jobs</a>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-8">
+          <table class="table table-striped table-hover bg-dark">
+            <tr class="table-dark">
+              <th>JOB ID</th>
+              <th>JOB NAME</th>
+              <th>DETAILS</th>
+              <th>EDIT</th>
+              <th>DELETE</th>
+            </tr>
+            <tr>
+              <td class="text-white font-weight-bolder">001</td>
+              <td class="text-white font-weight-bolder">Web Developer </td>
+              <td><a href="#" data-toggle="modal" data-target="#job_details1" class="btn btn-sm btn-block btn-info">Details</a></td>
+              <td><a href="#" data-toggle="modal" data-target="#job_editdetails1" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+              <td><a href="#" class="btn btn-sm btn-block btn-danger" onclick="confirm('Are you sure you want to delete \' Web Developer \'?');">Delete</a></td>
+            </tr>
+            <tr>
+              <td class="text-white font-weight-bolder">002</td>
+              <td class="text-white font-weight-bolder">Web Designer</td>
+              <td><a href="#" data-toggle="modal" data-target="#job_details2" class="btn btn-sm btn-block btn-info">Details</a></td>
+              <td><a href="#" data-toggle="modal" data-target="#job_editdetails2" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+              <td><a href="#" class="btn btn-sm btn-block btn-danger" onclick="confirm('Are you sure you want to delete \' Web Designer \'?');">Delete</a></td>
+            </tr>
+            <tr>
+              <td class="text-white font-weight-bolder">003</td>
+              <td class="text-white font-weight-bolder">Software Test Engineer</td>
+              <td><a href="#" data-toggle="modal" data-target="#job_details3" class="btn btn-sm btn-block btn-info">Details</a></td>
+              <td><a href="#" data-toggle="modal" data-target="#job_editdetails3" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+              <td><a href="#" class="btn btn-sm btn-block btn-danger" onclick="confirm('Are you sure you want to delete \' Software Test Engineer \'?');">Delete</a></td>
+            </tr>
+            <tr>
+              <td class="text-white font-weight-bolder">004</td>
+              <td class="text-white font-weight-bolder">Backend Developer</td>
+              <td><a href="#" data-toggle="modal" data-target="#job_details4" class="btn btn-sm btn-block btn-info">Details</a></td>
+              <td><a href="#" data-toggle="modal" data-target="#job_editdetails4" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+              <td><a href="#" class="btn btn-sm btn-block btn-danger" onclick="confirm('Are you sure you want to delete \' Backend Developer \'?');">Delete</a></td>
+            </tr>
+            <tr>
+              <td class="text-white font-weight-bolder">005</td>
+              <td class="text-white font-weight-bolder">Machine Learning </td>
+              <td><a href="#" data-toggle="modal" data-target="#job_details5" class="btn btn-sm btn-block btn-info">Details</a></td>
+              <td><a href="#" data-toggle="modal" data-target="#job_editdetails5" class="btn btn-sm btn-block btn-warning">Edit</a></td>
+              <td><a href="#" class="btn btn-sm btn-block btn-danger" onclick="confirm('Are you sure you want to delete \' Machine Learning \'?');">Delete</a></td>
+            </tr>
+            
+
+          </table>
+
+        </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Content-->
+
+<!-- Add Jobs Modal -->
+<div class="modal fade" id="add_jobs" tabindex="-1" aria-labelledby="add_jobs" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="add_jobs">Add Jobs Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form>
+        <div class="mb-3">
+          <input type="date" class="form-control form-control-sm" required>
+        </div>
+         <div class="mb-3">
+           <input type="text" class="form-control form-control-sm" placeholder="Job Name" required>
+         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-sm btn-success btn-block">Add New Job</button>
+        </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Job Details -->
+<div class="modal fade" id="job_details1" tabindex="-1" aria-labelledby="job_details1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_details1">Add Job Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table table-border table-hover">
+        <tr>
+          <th>ID</th>
+          <td>001</td>
+        </tr>
+        <tr>
+          <th>Job Added Date</th>
+          <td>02/05/2020</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>Web Developer</td>
+        </tr>
+      </table>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="job_details2" tabindex="-1" aria-labelledby="job_details2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_details2">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table table-border table-hover">
+        <tr>
+          <th>ID</th>
+          <td>002</td>
+        </tr>
+        <tr>
+          <th>Job Added Date</th>
+          <td>05/01/2020</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>Web Designer</td>
+        </tr>
+      </table>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="job_details3" tabindex="-1" aria-labelledby="job_details3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_details3">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table table-border table-hover">
+        <tr>
+          <th>ID</th>
+          <td>003</td>
+        </tr>
+        <tr>
+          <th>Job Added Date</th>
+          <td>05/04/2025</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>Software Test Engineer</td>
+        </tr>
+      </table>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="job_details4" tabindex="-1" aria-labelledby="job_details4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_details4">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table table-border table-hover">
+        <tr>
+          <th>ID</th>
+          <td>004</td>
+        </tr>
+        <tr>
+          <th>Job Added Date</th>
+          <td>18/02/2020</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>Backend Developer</td>
+        </tr>
+      </table>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="job_details5" tabindex="-1" aria-labelledby="job_details5" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_details5">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <table class="table table-border table-hover">
+        <tr>
+          <th>ID</th>
+          <td>005</td>
+        </tr>
+        <tr>
+          <th>Job Added Date</th>
+          <td>08/10/2020</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>Machine Learning Engineer</td>
+        </tr>
+      </table>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Edit Job Details -->
+
+<div class="modal fade" id="job_editdetails1" tabindex="-1" aria-labelledby="job_editdetails1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_editdetails1">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form>
+        <div class="mb-3">
+          <input type="text" class="form-control form-control-sm" value="02/05/2020" required>
+        </div>
+         <div class="mb-3">
+           <input type="text" class="form-control form-control-sm" value="Web Developer" required>
+         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-sm btn-success btn-block">Update Details</button>
+        </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="job_editdetails2" tabindex="-1" aria-labelledby="job_editdetails2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_editdetails2">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form>
+        <div class="mb-3">
+          <input type="text" class="form-control form-control-sm" value="05/01/2020" required>
+        </div>
+         <div class="mb-3">
+           <input type="text" class="form-control form-control-sm" value="Web Designer" required>
+         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-sm btn-success btn-block">Update Details</button>
+        </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="job_editdetails3" tabindex="-1" aria-labelledby="job_editdetails3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_editdetails3">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form>
+        <div class="mb-3">
+          <input type="text" class="form-control form-control-sm" value="05/04/2015" required>
+        </div>
+         <div class="mb-3">
+           <input type="text" class="form-control form-control-sm" value="Software Test Engineer" required>
+         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-sm btn-success btn-block">Update Details</button>
+        </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="job_editdetails4" tabindex="-1" aria-labelledby="job_editdetails4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_editdetails4">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form>
+        <div class="mb-3">
+          <input type="text" class="form-control form-control-sm" value="18/02/2020" required>
+        </div>
+         <div class="mb-3">
+           <input type="text" class="form-control form-control-sm" value="Backend Developer" required>
+         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-sm btn-success btn-block">Update Details</button>
+        </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="job_editdetails5" tabindex="-1" aria-labelledby="job_editdetails5" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="job_editdetails5">Add Employee Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <form>
+        <div class="mb-3">
+          <input type="text" class="form-control form-control-sm" value="08/10/2020" required>
+        </div>
+         <div class="mb-3">
+           <input type="text" class="form-control form-control-sm" value="Machine Learning Engineer" required>
+         </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-sm btn-success btn-block">Update Details</button>
+        </div>
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
