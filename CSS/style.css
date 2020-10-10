@@ -133,3 +133,8 @@ header,
     height: auto;
     width: auto;
 }
+
+.table1 {
+    height: 100%;
+    width: auto;
+}
